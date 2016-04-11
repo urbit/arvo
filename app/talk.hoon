@@ -2234,6 +2234,11 @@
   :-  ~
   +>.$(log (~(del by log) man))
 ::
+++  fix-bad-gram  :: XX hotfix, remove ~immediately
+  |=  a/telegram  ^+  a
+  ?.  =(p.q.a 0v4.vturl.39mgq.2mgq2.6msuc.qtr1l)  a
+  a(r.r.q [%lin & 'REDACTED'])
+::
 ++  prep
   |=  old/(unit house-any)
   ^-  (quip move ..prep)
@@ -2241,7 +2246,10 @@
     ra-abet:ra-init:ra
   |-
   ?-  -.u.old
-    $5  [~ ..prep(+<+ u.old)]
+    $5  =.  stories.u.old
+          %-  ~(run by stories.u.old) 
+          |=(story +<(grams (turn grams fix-bad-gram)))
+        [~ ..prep(+<+ u.old)]
     $4  =<  ^$(-.u.old %5, shells.u.old (~(run by shells.u.old) .))
         |=(shell-4 `shell`+<(system [system settings=*(set knot)]))
     $3  =<  ^$(-.u.old %4, stories.u.old (~(run by stories.u.old) .))
