@@ -186,6 +186,14 @@
 :: ++  poke-exit                                         ::
 ::   |=(~ se-abet:(se-blit `dill-blit`[%qit ~]))  ::  XX find bone
 :: ::
+++  fix-by-relink  :: XX hotfix, remove ~immediately
+  |=  dap/term
+  =<  se-abet
+  ~&  relinking+dap
+  =.  +>  se-view:(se-klin our dap)
+  =.  +>  se-subze:se-adze:se-adit
+  se-view:(se-link our dap)
+::
 ++  reap-phat                                         ::
   |=  {way/wire saw/(unit tang)}  
   =<  se-abet  =<  se-view
@@ -484,7 +492,10 @@
   |=  txt/tape
   ^+  +>
   ?.  se-ably  (se-talk [%leaf txt]~)
-  (se-blit %out (tuba txt))
+  =+  out=(mule |.((tuba txt)))                       ::  XX check utf8 properly
+  ?:  ?=($| -.out)
+    (se-blit %out (tuba <bad-utf8+`*`txt>))
+  (se-blit %out p.out)
 ::
 ++  se-poke                                           ::  send a poke
   |=  {gyl/gill par/pear}

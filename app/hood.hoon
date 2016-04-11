@@ -86,6 +86,12 @@
 ++  from-kiln  (from-lib %kiln [..$ _abet]:(kiln))
 ++  from-write  (from-lib %write [..$ _abet]:(write))
 ::
+++  prep
+  |=  a/(unit hood-0)
+  ?~  a  [~ +>]
+  =.  +<+.+>  u.a
+  ((wrap fix-by-relink):from-drum %talk)  :: XX hotfix, remove ~immediately
+::
 ++  init-helm                 |=({way/wire *} [~ +>])
 ++  made-write                (wrap made):from-write
 ++  made-kiln                 (wrap take-made):from-kiln
