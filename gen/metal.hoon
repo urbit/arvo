@@ -7,7 +7,7 @@
   !:
 :-  %say
 |=  $:  {now/@da * bec/beak}
-        {{who/@p $~} $~}
+        {{who/@p $~} try/_| $~}
     ==
 ::
 ::  we're creating an event series E whose lifecycle can be computed
@@ -232,19 +232,20 @@
     :-  [now i.main-moves]
     $(main-moves t.main-moves, now (add now (bex 48)))
 ::
-::  ~&  %metal-testing
-::  =+  ^=  yop
-::      ^-  @p
-::      %-  mug
-::      .*  :*  boot-one
-::              boot-two
-::              compiler-formula
-::              compiler-source
-::              arvo-source
-::              main-sequence
-::          ==
-::      [2 [0 3] [0 2]]
-::  ~&  [%metal-tested yop]
+~?  try
+  ~&  %metal-testing
+  =+  ^=  yop
+      ^-  @p
+      %-  mug
+      .*  :*  boot-one
+              boot-two
+              compiler-formula
+              compiler-source
+              arvo-source
+              main-events
+          ==
+      [2 [0 3] [0 2]]
+  [%metal-tested yop]
 ::
 :*  boot-one
     boot-two
