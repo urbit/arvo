@@ -9800,10 +9800,9 @@
       ~>(%mean.[%leaf "rest-loop"] !!)
     =>  .(fan (~(gas in fan) leg))
     %-  fork
-    %~  tap  in
-      %-  ~(gas in *(set type))
-      (turn leg |=({p/type q/hoon} (play(sut p) q)))
-    ==
+    =-  ~(tap in -) :: %~  tap  in
+    %-  ~(gas in *(set type))
+    (turn leg |=({p/type q/hoon} (play(sut p) q)))
   ::
   ++  take
     |=  {vit/vein duz/tyro}
@@ -10270,11 +10269,10 @@
       :_  q.doy
       :_  p.doy
       %^  cat  3
-        %~  rent  co
-            :+  %$  %ud
-            %-  ~(rep by (~(run by q.s.q.sut) |=(tomb ~(wyt by q))))
-            |=([[@ a=@u] b=@u] (add a b))
-        ==
+        =-  ~(rent co -)  :: %~  rent  co
+        :+  %$  %ud
+        %-  ~(rep by (~(run by q.s.q.sut) |=(tomb ~(wyt by q))))
+        |=([[@ a=@u] b=@u] (add a b))
       %^  cat  3
         ?-(p.q.sut $gold '.', $iron '|', $lead '?', $zinc '&')
       =+  gum=(mug q.s.q.sut)
@@ -11967,7 +11965,7 @@
                     ['+' (rune lus %cnls expc)]
                     ['-' (rune hep %cnhp expk)]
                     [':' (rune col %cnhp expi)]
-                    ['~' (rune sig %cnsg expu)]
+                    ['~' (rune sig %cnsg expn)]
                     ['*' (rune tar %cntr expm)]
                     ['=' (rune tis %cnts exph)]
                 ==
@@ -12263,6 +12261,9 @@
     ++  expk  |.(;~(gunk loaf ;~(plug loaf (easy ~))))  ::  list of two hoons
     ++  expl  |.(;~(gunk (stag ~ sym) loaf loaf))       ::  term, two hoons
     ++  expm  |.((butt ;~(gunk rope loaf rick)))        ::  several [tile hoon]s
+    ++  expn  |.  ;~  gunk  rope  loaf                  ::  wing, hoon,
+                    ;~(plug loaf (easy ~))              ::  list of one hoon
+                  ==                                    ::
     ++  expo  |.(;~(gunk wise loaf loaf))               ::  =;
     ++  expp  |.(;~(gunk (butt rick) loaf))             ::  [wing hoon]s, hoon
     ++  expq  |.(;~(gunk rope loaf loaf))               ::  wing and two hoons

@@ -2357,9 +2357,8 @@
         ?:  pat.sep  " "
         =-  (weld - q:(fall pre [p=| q=" "]))
         %~  ar-glyf  ar
-          ?:  =(who self)  aud
-          (~(del in aud) [who %inbox])
-        ==
+        ?:  =(who self)  aud
+        (~(del in aud) [who %inbox])
       =/  lis/(list tape)
         %+  simple-wrap
           `tape``(list @)`(tuba (trip msg.sep))
