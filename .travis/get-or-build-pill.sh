@@ -56,3 +56,4 @@ mkdir built-pill; cp urbit.pill built-pill/$PILL_NAME.pill
 :
 : Created $PILL_NAME.pill, to be uploaded if tests pass
 :
+md5sum urbit.pill; : was bcca0b6928d273f002167f6e64b0eecd on laptop
