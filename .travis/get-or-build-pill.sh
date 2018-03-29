@@ -4,7 +4,7 @@ set -x
 
 # XX use -s instead of hash pill
 HASH=$(git -C .. log -1 HEAD --format=%H -- sys/)
-export PILL_NAME="git-${HASH:0:10}"
+export PILL_NAME="manual-git-${HASH:0:10}"
 
 if [ ! ${PILL_FORCE:-} ]; then
   : Trying pill for commit
